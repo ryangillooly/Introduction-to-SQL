@@ -28,13 +28,13 @@ Explanation:
 - ORDER BY controls the order of rows in the result.
 - DESC means descending (Z → A).
 - Without DESC, the default would be ascending.
-*/
 
 
-/* ------------------------------------------------------------
-   Exercise 2:
-   Select all members and order them alphabetically by full_name.
-   ------------------------------------------------------------ */
+
+------------------------------------------------------------
+Exercise 2:
+Select all members and order them alphabetically by full_name.
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Members
@@ -47,13 +47,13 @@ ORDER BY
 Explanation:
 - ORDER BY full_name sorts members alphabetically.
 - ASC (ascending) is the default and does not need to be written.
-*/
 
 
-/* ------------------------------------------------------------
-   Exercise 3:
-   Select all loans and order them by due_date (earliest first).
-   ------------------------------------------------------------ */
+
+------------------------------------------------------------
+Exercise 3:
+Select all loans and order them by due_date (earliest first).
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Loans
@@ -66,13 +66,13 @@ ORDER BY
 Explanation:
 - Ordering by due_date without DESC sorts from earliest to latest.
 - This is useful for seeing which loans are due soonest.
-*/
 
 
-/* ------------------------------------------------------------
-   Exercise 4:
-   Select the first 3 rows from the Publishers table.
-   ------------------------------------------------------------ */
+
+------------------------------------------------------------
+Exercise 4:
+Select the first 3 rows from the Publishers table.
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Publishers
@@ -85,13 +85,13 @@ Explanation:
 - LIMIT controls how many rows are returned.
 - Without ORDER BY, the rows returned are not guaranteed
   to be in any specific order.
-*/
 
 
-/* ------------------------------------------------------------
-   Exercise 5:
-   Select the 5 oldest loans.
-   ------------------------------------------------------------ */
+
+------------------------------------------------------------
+Exercise 5:
+Select the 5 oldest loans.
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Loans

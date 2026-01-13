@@ -6,11 +6,11 @@
 
    Always try the exercises yourself first before reading these answers.
    
-   ============================================================ 
+============================================================ 
 
-   Exercise 1:
-   Find authors who have written more than 1 book.
-   ------------------------------------------------------------ */
+Exercise 1:
+Find authors who have written more than 1 book.
+------------------------------------------------------------ */
 SELECT
     a.full_name,
     COUNT(b.book_id) AS NumberOfBooks
@@ -34,10 +34,10 @@ Explanation:
 
 
 
-   ------------------------------------------------------------
-   Exercise 2:
-   Find publishers that have exactly 1 book.
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 2:
+Find publishers that have exactly 1 book.
+------------------------------------------------------------ */
 SELECT
     p.name,
     COUNT(b.book_id) AS NumberOfBooks
@@ -59,10 +59,10 @@ Explanation:
 
 
 
-   ------------------------------------------------------------
-   Exercise 3:
-   Find books that have 3 or more copies.
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 3:
+Find books that have 3 or more copies.
+------------------------------------------------------------ */
 SELECT
     b.title,
     COUNT(bc.copy_id) AS NumberOfCopies
@@ -85,10 +85,10 @@ Explanation:
 
 
 
-   ------------------------------------------------------------
-   Exercise 4:
-   Find members who have 2 or more ACTIVE loans.
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 4:
+Find members who have 2 or more ACTIVE loans.
+------------------------------------------------------------ */
 SELECT
     m.full_name,
     COUNT(l.loan_id) AS ActiveLoans

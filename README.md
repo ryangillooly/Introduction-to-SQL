@@ -1,122 +1,62 @@
 # SQL Learning Path – Library Database
 
-Welcome! This repo is a hands-on, beginner-first path for learning SQL using a realistic Library database. Follow the numbered lessons in order, run one query at a time, and check the answers only after you try the exercises yourself.
+Welcome! This repo is a hands-on, beginner-friendly path for learning SQL using a realistic Library database. The steps below guide you from installing the tools to running each exercise in order.
 
 ---
 
-## Prerequisites (install these first)
-- SQLite (CLI)
-- VS Code
-- VS Code extensions: Database Client JDBC, Markdown Preview Mermaid Support
+## Install the required tools
+- **VS Code** (free code editor) — download and install from https://code.visualstudio.com/.
+- **SQLite** (database engine) — On macOS you likely already have it. If it’s missing, install via https://sqlite.org/download.html or run `brew install sqlite` in the terminal.
+- **VS Code extensions**
+  - **[Required]** _Database Client JDBC_ (lets you connect to the included SQLite file).
+
+![alt text](Images/db-client-install.png)
 
 ---
 
-## Quick start (fastest path)
-1) Clone/download this repo.  
-2) Open it in VS Code.  
-3) Use the Database Client JDBC extension to open `Databases/Library.db` (or the SQLite CLI: `sqlite3 Databases/Library.db`).  
-4) Start with `Exercises/01 - SELECT Basics/01 - SELECT Basics.sql`.  
-5) Run the example queries, then attempt the exercises at the bottom.  
-6) Open the matching `- ANSWERS.sql` only to check your work.  
-
-Tip: run one query at a time so you can see exactly what changes.
-
-![alt text](Docs/image-2.png)
-
-![alt text](Docs/image-1.png)
-
-![alt text](Docs/image-4.png)
-
-![alt text](Docs/image-3.png)
+## Open the project
+1) Clone or download this repo.  
+2) In VS Code, choose “File → Open Folder” and select the project folder (Introduction-To-SQL).  
+3) Keep the `Databases/Library.db` file where it is—this is the database you will query.
 
 ---
 
-## Project layout
-- `Databases/Library.db` — ready-to-query SQLite database (sample data included)
-- `Databases/Database Scripts/LibraryDB/schema.sql` — schema
-- `Databases/Database Scripts/LibraryDB/sample dataset.sql` — data seed
-- `Exercises/<lesson>` — teaching file + `- ANSWERS.sql`
+## Connect to the Library database in VS Code
+1) Open the **Database Client JDBC** extension panel in VS Code. (The icon highlighted in red, on the left of the image) 
+2) Add a **SQLite** connection.  
+3) When prompted for the database file, browse to `Databases/Library.db` in this repo and connect.  
+4) You should now see the Library database listed in the extension panel.
 
-Lessons are numbered; do them in order.
+![alt text](Images/db-connect.png)
+
+5) When connected, you should see the following:
+
+![alt text](Images/db-view.png)
+
+6) If you select a table, it will run a SQL query to retrieve the first 100 rows, and display the data
+
+![alt text](Images/data-view.png)
 
 ---
 
-## Resetting the database (optional)
-If you want to recreate the DB from scratch:
-```bash
-cd /Users/ryan/Desktop/Databases
-sqlite3 Databases/Library.db < "Databases/Database Scripts/LibraryDB/schema.sql"
-sqlite3 Databases/Library.db < "Databases/Database Scripts/LibraryDB/sample dataset.sql"
-```
+## Work through the exercises (step-by-step)
+1) Open `Exercises/01 - SELECT Basics/01 - SELECT Basics.sql` (the teaching file—**not** the `- ANSWERS` file).  
+2) In the editor, place your cursor in the first SQL statement and click the **Run** button shown above it (or the play icon in the gutter).  
+3) A results grid will appear; review it to make sure it matches what the query is supposed to do.  
+
+![alt text](Images/sql-view.png)
+
+4) Continue running each statement in order.  
+5) When you reach the exercises section in that file, write your answers directly below each prompt and run them the same way.  
+6) After you try the exercises yourself, open the matching `*- ANSWERS.sql` file to compare results.  
+7) Move to the next numbered lesson folder and repeat the same pattern.
+
+Tip: run one query at a time so it’s clear what each statement returns or changes.
 
 ---
 
 ## ERD (Entity Relationship Diagram)
 
-The following diagram shows the structure of the database.
+The diagram below shows the Library database structure.
 
-```mermaid
-erDiagram
-    Publishers ||--o{ Books : publishes
-    Authors    ||--o{ Books : writes
-    Books      ||--o{ Book_Copies : has
-    Members    ||--o{ Loans : makes
-    Book_Copies ||--o{ Loans : loaned_as
-    Members    ||--o{ Reservations : makes
-    Books      ||--o{ Reservations : reserved_for
-    Loans      ||--o{ Fines : incurs
-
-    Publishers {
-        int publisher_id PK
-        text name
-        text country
-    }
-
-    Authors {
-        int author_id PK
-        text full_name
-    }
-
-    Books {
-        int book_id PK
-        int publisher_id FK
-        int author_id FK
-        text title
-        text isbn
-    }
-
-    Book_Copies {
-        int copy_id PK
-        int book_id FK
-        text status
-        text shelf_location
-    }
-
-    Members {
-        int member_id PK
-        text full_name
-        text email
-    }
-
-    Loans {
-        int loan_id PK
-        int member_id FK
-        int copy_id FK
-        text loan_date
-        text due_date
-        text return_date
-    }
-
-    Reservations {
-        int reservation_id PK
-        int member_id FK
-        int book_id FK
-        text reserved_date
-    }
-
-    Fines {
-        int fine_id PK
-        int loan_id FK
-        real amount
-        int paid
-    }
+![alt text](Images/erd.png)

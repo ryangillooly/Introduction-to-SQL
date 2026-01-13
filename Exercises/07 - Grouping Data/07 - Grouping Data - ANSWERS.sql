@@ -6,11 +6,11 @@
 
    Always try the exercises yourself first before reading these answers.
    
-   ============================================================ 
+============================================================ 
 
-   Exercise 1:
-   Count how many publishers exist in the system.
-   ------------------------------------------------------------ */
+Exercise 1:
+Count how many publishers exist in the system.
+------------------------------------------------------------ */
 SELECT
     COUNT(*) AS TotalPublishers
 FROM 
@@ -26,11 +26,11 @@ Explanation:
 
 
 
-  ------------------------------------------------------------
-   Exercise 2:
-   Count how many book copies exist per status
-   (AVAILABLE, ON_LOAN, DAMAGED, etc.).
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 2:
+Count how many book copies exist per status
+(AVAILABLE, ON_LOAN, DAMAGED, etc.).
+------------------------------------------------------------ */
 SELECT
     status,
     COUNT(*) AS NumberOfCopies
@@ -52,13 +52,13 @@ Explanation:
 
 
 
-   ------------------------------------------------------------
-   Exercise 3:
-   Count how many books each author has written.
-   Tables involved:
-     - Authors
-     - Books
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 3:
+Count how many books each author has written.
+Tables involved:
+    - Authors
+    - Books
+------------------------------------------------------------ */
 SELECT
     a.full_name,
     COUNT(b.book_id) AS NumberOfBooks
@@ -82,14 +82,14 @@ Explanation:
 
 
 
-   ------------------------------------------------------------
-   Exercise 4:
-   Count how many loans exist per book title.
-   Tables involved:
-     - Loans
-     - Book_Copies
-     - Books
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 4:
+Count how many loans exist per book title.
+Tables involved:
+    - Loans
+    - Book_Copies
+    - Books
+------------------------------------------------------------ */
 SELECT
     b.title,
     COUNT(l.loan_id) AS NumberOfLoans

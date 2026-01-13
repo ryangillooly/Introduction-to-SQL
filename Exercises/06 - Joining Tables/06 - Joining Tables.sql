@@ -14,20 +14,21 @@
         - https://www.acuitytraining.co.uk/news-tips/introduction-sql-joins/
         - https://www.w3schools.com/sql/sql_join.asp
 
-   ============================================================ 
+============================================================ 
 
-   1) Join Books with Authors
+1) Join Books with Authors
 
-   Relationship:
-     - Each book has one author
-     - author_id links Books → Authors
-   ------------------------------------------------------------ */
+Relationship:
+   - Each book has one author
+   - author_id links Books → Authors
+------------------------------------------------------------ */
 SELECT
     b.title     AS BookTitle,
     a.full_name AS AuthorName
 FROM 
     Books   AS b JOIN 
     Authors AS a ON b.author_id = a.author_id;
+
 
 /* ------------------------------------------------------------
    2) Join Books with Publishers
@@ -42,6 +43,7 @@ SELECT
 FROM 
     Books      AS b JOIN
     Publishers AS p ON b.publisher_id = p.publisher_id;
+
 
 /* ------------------------------------------------------------
    3) Join Books with Book Copies

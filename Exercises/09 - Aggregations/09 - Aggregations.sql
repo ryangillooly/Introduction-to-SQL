@@ -15,12 +15,12 @@
      - https://www.w3schools.com/sql/sql_min_max.asp
      - https://www.w3schools.com/sql/sql_avg.asp
 
-   ============================================================ 
+  ============================================================ 
 
-   1) MIN and MAX across an entire table
+  1) MIN and MAX across an entire table
 
-   Using Fines.amount is beginner-friendly because it is numeric.
-   ------------------------------------------------------------ */
+  Using Fines.amount is beginner-friendly because it is numeric.
+  ------------------------------------------------------------ */
 SELECT
     MIN(amount) AS SmallestFine,
     MAX(amount) AS LargestFine

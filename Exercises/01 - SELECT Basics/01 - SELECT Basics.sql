@@ -69,7 +69,6 @@ FROM
 
  Exercise 1:
  Select ALL columns from the Publishers table.
- Hint: SELECT * FROM Publishers;
  Write your query below:
  */
 

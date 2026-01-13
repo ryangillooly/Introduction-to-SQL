@@ -6,11 +6,11 @@
 
    Always try the exercises yourself first before reading these answers.
 
-   ============================================================ 
+============================================================ 
 
    Exercise 1:
    Select ALL columns from the Publishers table.
-   ------------------------------------------------------------ */
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Publishers;
@@ -23,10 +23,11 @@ Explanation:
 - This returns every column and every row from Publishers.
 - Useful when exploring a table for the first time.
 
+
  ------------------------------------------------------------
    Exercise 2:
    Select ONLY the title column from the Books table.
-   ------------------------------------------------------------ */
+------------------------------------------------------------ */
 SELECT
     title
 FROM 
@@ -40,10 +41,11 @@ Explanation:
 - This makes the result easier to read than SELECT *.
 - Use this when you only care about specific fields.
 
+
  ------------------------------------------------------------
    Exercise 3:
    Select ONLY copy_id and status from the Book_Copies table.
-   ------------------------------------------------------------ */
+------------------------------------------------------------ */
 SELECT
     copy_id,
     status
@@ -57,6 +59,7 @@ Explanation:
 - Multiple columns are listed after SELECT.
 - The order of columns in SELECT controls the output order.
 - No WHERE clause means all rows are returned.
+
 
   ------------------------------------------------------------
    Exercise 4:

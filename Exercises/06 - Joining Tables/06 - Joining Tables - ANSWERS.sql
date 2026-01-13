@@ -6,14 +6,14 @@
 
    Always try the exercises yourself first before reading these answers.
    
-   ============================================================ 
+============================================================ 
 
-   Exercise 1:
-   Join Books and Authors and return:
-     - Book title
-     - Author name
-   Order the results by Book title.
-   ------------------------------------------------------------ */
+Exercise 1:
+Join Books and Authors and return:
+    - Book title
+    - Author name
+Order the results by Book title.
+------------------------------------------------------------ */
 SELECT
     b.title     AS BookTitle,
     a.full_name AS AuthorName
@@ -33,13 +33,13 @@ Explanation:
 
 
 
-   ------------------------------------------------------------
-   Exercise 2:
-   Join Books and Publishers and return:
-     - Book title
-     - Publisher name
-   Only include books published in the United Kingdom.
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 2:
+Join Books and Publishers and return:
+    - Book title
+    - Publisher name
+Only include books published in the United Kingdom.
+------------------------------------------------------------ */
 SELECT
     b.title AS BookTitle,
     p.name  AS PublisherName
@@ -59,14 +59,14 @@ Explanation:
 
 
 
-   ------------------------------------------------------------
-   Exercise 3:
-   Join Books and Book_Copies and return:
-     - Book title
-     - Copy ID
-     - Status
-   Only show copies with status = 'AVAILABLE'.
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 3:
+Join Books and Book_Copies and return:
+    - Book title
+    - Copy ID
+    - Status
+Only show copies with status = 'AVAILABLE'.
+------------------------------------------------------------ */
 SELECT
     b.title  AS BookTitle,
     bc.copy_id,
@@ -86,14 +86,14 @@ Explanation:
 
 
 
-   ------------------------------------------------------------
-   Exercise 4:
-   Join Loans and Members and return:
-     - Member name
-     - Loan date
-     - Due date
-   Only include loans from after '2026-01-01'.
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 4:
+Join Loans and Members and return:
+    - Member name
+    - Loan date
+    - Due date
+Only include loans from after '2026-01-01'.
+------------------------------------------------------------ */
 SELECT
     m.full_name AS MemberName,
     l.loan_date,

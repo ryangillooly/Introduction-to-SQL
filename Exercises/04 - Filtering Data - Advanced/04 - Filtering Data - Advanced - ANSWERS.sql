@@ -6,12 +6,12 @@
 
    Always try the exercises yourself first before reading these answers.
    
-   ============================================================ 
+============================================================ 
 
-   Exercise 1:
-   Select all publishers where the country
-   CONTAINS the word "King".
-   ------------------------------------------------------------ */
+Exercise 1:
+Select all publishers where the country
+CONTAINS the word "King".
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Publishers
@@ -27,12 +27,12 @@ Explanation:
 - This returns countries such as "United Kingdom".
 
 
- ------------------------------------------------------------
-   Exercise 2:
-   Select all Book_Copies where:
-     - status is 'AVAILABLE'
-     - AND shelf_location is 'C2'
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+  Exercise 2:
+  Select all Book_Copies where:
+    - status is 'AVAILABLE'
+    - AND shelf_location is 'C2'
+  ------------------------------------------------------------ */
 SELECT *
 FROM 
     Book_Copies
@@ -48,13 +48,13 @@ Explanation:
 - Only copies that are AVAILABLE and located at C2 are returned.
 
 
- ------------------------------------------------------------
-   Exercise 3:
-   Select all Book_Copies where:
-     - status is 'LOST'
-     - OR status is 'DAMAGED'
-     - AND shelf_location is 'B2'
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 3:
+Select all Book_Copies where:
+  - status is 'LOST'
+  - OR status is 'DAMAGED'
+  - AND shelf_location is 'B2'
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Book_Copies
@@ -72,15 +72,15 @@ Explanation:
 - Parentheses control how conditions are evaluated.
 - The status condition is grouped together first.
 - Without parentheses, the result would be different.
-*/
 
 
-/* ------------------------------------------------------------
-   Exercise 4:
-   Select all publishers where:
-     - publisher_id is greater than 5
-     - AND the country starts with 'United'
-   ------------------------------------------------------------ */
+
+------------------------------------------------------------
+Exercise 4:
+Select all publishers where:
+  - publisher_id is greater than 5
+  - AND the country starts with 'United'
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Publishers
@@ -95,10 +95,10 @@ Explanation:
 - publisher_id > 5 filters numerically.
 - LIKE 'United%' matches countries beginning with "United".
 - Both conditions must be true.
-*/
 
 
-/*
+
+
 ------------------------------------------------------------
 Exercise 5:
 Rewrite this query using IN instead of OR:
@@ -117,16 +117,16 @@ WHERE
 Explanation:
 - IN replaces multiple OR conditions.
 - This is easier to read and easier to extend later.
-*/
 
 
-/* ------------------------------------------------------------
-   Exercise 6:
-   Select all Book_Copies where status is
-   one of the following:
-     - AVAILABLE
-     - ON_LOAN
-   ------------------------------------------------------------ */
+
+------------------------------------------------------------
+Exercise 6:
+Select all Book_Copies where status is
+one of the following:
+  - AVAILABLE
+  - ON_LOAN
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Book_Copies
@@ -139,16 +139,16 @@ WHERE
 Explanation:
 - IN checks the column against a list of allowed values.
 - This is equivalent to using OR between each value.
-*/
 
 
-/* ------------------------------------------------------------
-   Exercise 7:
-   Select all publishers where the country is NOT
-   one of the following:
-     - United States
-     - Canada
-   ------------------------------------------------------------ */
+
+------------------------------------------------------------
+Exercise 7:
+Select all publishers where the country is NOT
+one of the following:
+  - United States
+  - Canada
+------------------------------------------------------------ */
 SELECT *
 FROM 
     Publishers
@@ -161,10 +161,10 @@ WHERE
 Explanation:
 - NOT IN excludes rows that match the list.
 - Only publishers outside those countries are returned.
-*/
 
 
-/*
+
+
 ------------------------------------------------------------
 Exercise 8 (thinking exercise):
 Why is IN often preferred over many OR conditions?

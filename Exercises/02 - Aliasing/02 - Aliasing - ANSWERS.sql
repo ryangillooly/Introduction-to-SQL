@@ -25,10 +25,10 @@ Explanation:
 - This is useful when creating readable reports or exports.
 
 
-   ------------------------------------------------------------
-   Exercise 2:
-   Select full_name from Members and rename it to MemberName.
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 2:
+Select full_name from Members and rename it to MemberName.
+------------------------------------------------------------ */
 SELECT
     full_name AS MemberName
 FROM 
@@ -43,12 +43,12 @@ Explanation:
   or when results are shown to non-technical users.
 
 
-  ------------------------------------------------------------
-   Exercise 3:
-   Use a table alias for Books (b) and select:
-     - b.title as Title
-     - b.isbn  as ISBN
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 3:
+Use a table alias for Books (b) and select:
+    - b.title as Title
+    - b.isbn  as ISBN
+------------------------------------------------------------ */
 SELECT
     b.title AS Title,
     b.isbn  AS ISBN
@@ -65,11 +65,11 @@ Explanation:
   have columns with the same name.
 
 
-   ------------------------------------------------------------
-   Exercise 4:
-   Try removing the AS keyword from an alias.
-   Does the query still work?
-   ------------------------------------------------------------ */
+------------------------------------------------------------
+Exercise 4:
+Try removing the AS keyword from an alias.
+Does the query still work?
+------------------------------------------------------------ */
 
 SELECT
     title BookTitle
